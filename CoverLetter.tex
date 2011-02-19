@@ -1,0 +1,111 @@
+\documentclass[letterpaper,11pt]{article}
+%Margin setup
+
+\setlength{\voffset}{0.05in}
+\setlength{\paperwidth}{8.5in}
+\setlength{\paperheight}{10in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\textheight}{10.5in}
+\setlength{\topmargin}{-0.25in}
+\setlength{\textwidth}{8in}
+\setlength{\topskip}{0in}
+\setlength{\evensidemargin}{-0.25in}
+\setlength{\oddsidemargin}{-0.75in}
+\usepackage{shading}
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-6pt}}
+\newcommand{\resitemdescription}[2]{\item \textbf{#1} #2 \vspace{-6pt}}
+\newcommand{\resheading}[1]{{\large \parashade[.9]{sharpcorners}{\textbf{#1}}}\vspace{-20pt}}
+\newcommand{\objectiveresheading}[1]{{\parashade[.9]{sharpcorners}{\textbf{\Large{Objective: }\large{#1}}}}}
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2
+\end{tabular*}
+\begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
+		\textit{#3} & \textit{#4}
+\end{tabular*}\vspace{-8pt}}
+
+\newcommand{\ressubheadingoneline}[2]{
+\begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+\end{tabular*}\vspace{-8pt}}
+% Constants
+% Me
+\newcommand{\myname}[0]{Jason R. Berlinsky}
+\newcommand{\myphone}[0]{973-933-1487}
+\newcommand{\myemail}[0]{jason@jasonberlinsky.com}
+\newcommand{\myaddress}[0]{8 Craig Road}
+\newcommand{\mycity}[0]{Morristown}
+\newcommand{\mystate}[0]{NJ}
+\newcommand{\myzip}[0]{07960}
+\newcommand{\myurl}[0]{http://www.jasonberlinsky.com}
+
+% Company
+\newcommand{\recipient}[0]{Mrs. Sandee Weiner}
+\newcommand{\recipienttitle}[0]{Vice President of Collaboration \& Social Media}
+\newcommand{\company}[0]{Bank of America}
+\newcommand{\companyaddress}[0]{PO Box 79}
+\newcommand{\companycity}[0]{Wayne}
+\newcommand{\companystate}[0]{NJ}
+\newcommand{\companyzip}[0]{07470}
+%-----------------------------------------------------------
+
+
+\begin{document}
+
+\begin{tabular*}{8in}{l@{\extracolsep{\fill}}r}
+\textbf{\Large \myname}  & \myphone\\
+\myaddress &  \myemail \\
+\mycity, \mystate \ \myzip & \myurl\\
+\end{tabular*}
+\\
+
+\vspace{0.75in}
+
+\today
+
+\recipient
+
+\recipienttitle
+
+\company
+
+\companyaddress
+
+\companycity, \companystate \ \companyzip
+
+
+\vspace{0.3in}
+
+
+\recipient:
+\vspace{0.2in}
+
+It was a pleasure meeting and speaking with you at FedEx this afternoon. You mentioned that an internship or other summer position with Bank of America was a possibility, and I'd like you to know that this would be the the chance of a lifetime for me. I have been programming since I was five years old, profiting from it since I was eleven, and would simply love the opportunity to put my skills to work in an office setting.
+
+\vspace{0.15in}
+My business experience has included and depended on work in social media and marketing. A large majority of my business comes from word-of-mouth referrals, thanks to lasting trust formed between myself and my clients. This trust is much like that which Bank of America seeks to build; an intimate relationship between bankers and account holders, without necessitating continuous physical contact.
+
+\vspace{0.15in}
+My ability to form lasting relationships, as well as my programming abilities, will prove to be a powerful asset to Bank of America. As my enclosed resume shows, I possess the technical abilities to complete complex problem-solving and programming tasks, and I have proven that I am capable of understanding what makes people want to work together for a long time. I welcome the opportunity to use my knowledge in such an environment that I can not only contribute, but learn from others with more work experience.
+
+\vspace{0.15in}
+I eagerly await your response. Please do not hesitate to contact me with any questions.
+
+\vspace{0.15in}
+\vspace{0.2in}
+Sincerely,
+
+\vspace{0.75in}
+\myname
+
+\myphone
+
+\myemail
+
+\end{document}
