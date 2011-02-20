@@ -50,9 +50,13 @@
 \renewcommand{\familydefault}{\sfdefault}
 
 \newcommand{\resitem}[1]{\item #1 \vspace{-6pt}}
+
 \newcommand{\resitemdescription}[2]{\item \textbf{#1} #2 \vspace{-6pt}}
+
 \newcommand{\resheading}[1]{{\large \parashade[.9]{sharpcorners}{\textbf{#1}}}\vspace{-20pt}}
+
 \newcommand{\objectiveresheading}[1]{{\parashade[.9]{sharpcorners}{\textbf{\Large{Objective: }\large{#1}}}}}
+
 \newcommand{\ressubheading}[4]{
 \begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
 		\textbf{#1} & #2
@@ -74,43 +78,47 @@
 		\textbf{#1} & #2 \\
 \end{tabular*}\vspace{-8pt}}
 %-----------------------------------------------------------
+% Wrappers
+\newcommand{\makeheading}[8]{
+	\begin{tabular*}{7.15in}{l@{\extracolsep{\fill}}r}
+		{\Large \textbf{#1}} & #2\\
+		#5 &  #3 \\
+		#6, #7 #8 & #4\\
+	\end{tabular*}\\
+}
+\newcommand{\headingspace}[0]{
+	\vspace{-5mm}
+}
 % List headings
 %\renewcommand{\labelenumi}{\Roman{enumi}.}
 %\renewcommand{\labelenumii}{\Roman{enumi}. \alph{enumii}}
 
-
+% BEGIN CONTENT
 
 \begin{document}
-\begin{tabular*}{7.15in}{l@{\extracolsep{\fill}}r}
-\textbf{\Large Jason R. Berlinsky}  & 973-933-1487\\
-8 Craig Road &  jason@jasonberlinsky.com \\
-Morristown, NJ 07960 & http://www.jasonberlinsky.com\\
-\end{tabular*}
-\\
+\makeheading
+	{Jason R. Berlinsky}
+	{973-933-1487}
+	{jason@jasonberlinsky.com}
+	{www.jasonberlinsky.com}
+	{8 Craig Road}
+	{Morristown}{NJ}{07960}
 
 \vspace{0.05in}
 
-%\resheading{Objective}
-
-%\begin{itemize}
-%	\resitem{To contribute \& expand my knowledge and experience in computer science}
-%\end{itemize}
-
-\vspace{-5mm}
-
+\headingspace
 \resheading{Summary of Qualifications}
+	\begin{itemize}
+		\resitemdescription{Summary:}{An experienced software developer with a focus in mobile and web application development, specializing in designing creative solutions to challenging situations}
+		\resitemdescription{Programming Languages:}{Objective-C, PHP, Ruby, Java, JavaScript, SQL}
+		\resitemdescription{Operating Systems:}{Linux (Debian, Red Hat), MacOS X, iOS, Android, Windows}
+		\resitemdescription{Technologies:}{Apache, Tomcat, Eclipse, Version Control (SVN and Git)}
+		\resitemdescription{U.S. Citizen}{}
+	\end{itemize}
 
-\begin{itemize}
-\resitemdescription{Summary:}{An experienced software developer with a focus in mobile and web application development, specializing in designing creative solutions to challenging situations}
-\resitemdescription{Programming Languages:}{Objective-C, PHP, Ruby, Java, JavaScript, SQL}
-\resitemdescription{Operating Systems:}{Linux (Debian, Red Hat), MacOS X, iOS, Android, Windows}
-\resitemdescription{Technologies:}{Apache, Tomcat, Eclipse, Version Control (SVN and Git)}
-\resitemdescription{U.S. Citizen}{}
-\end{itemize}
-
-\vspace{-5mm}
+\headingspace
 \resheading{Experience}
-\begin{itemize}
+	\begin{itemize}
 %	\item
 %	\ressubheadingnoitalics{CareEvolution}{Ann Arbor, MI}{Programming Intern}{January 2011 - Present}
 %\begin{itemize}
@@ -118,99 +126,68 @@ Morristown, NJ 07960 & http://www.jasonberlinsky.com\\
 %		\resitem{If this were to stay here, it would be something like: Responsible for the development of \_\_\_}
 %		\resitem{In theory, this all fits on one page once this section is removed. The last "Experience" item will be\vspace{-1mm} replaced by this once I have something to go here.}
 %	\end{itemize}
-	\item
-	\ressubheadingnoitalics{CommonPlace USA}{Cambridge, MA}{Ruby on Rails Developer}{November 2010 - Present}
-\begin{itemize}
-		\resitem{Team member developing an innovative social network, centered around a user's interaction with his\vspace{-2mm} or her community}
-		\resitem{Responsible for the implementation of features essential to mass-adopted social networks, including:
-			\begin{itemize}
-				\item \vspace{-2mm}
-					Integration with existing social platforms, such as Facebook;
-				\item \vspace{-1.5mm}
-					Retrieval and integration of relevant external data sources; and
-				\item \vspace{-1.5mm}
-					Development of a system allowing easy and effective communication between users
-			\end{itemize}}
-		\resitem{Developed an infrastructure capable of efficiently handling thousands of simultaneous connections}
-		\resitem{Assessed and eliminated various security vulnerabilities in pre-written and custom code}
-		\resitem{Ensured cross-browser compatibility across three major platforms:
-			\begin{itemize}
-				\item \vspace{-2mm}
-					Browsers: Microsoft Internet Explorer 6 though 8, Mozilla Firefox, Google Chrome, Apple Safari
-			\end{itemize}}
-		
-	\end{itemize}
-	\item
-	\ressubheadingnoitalics{College of Engineering - University of Michigan}{Ann Arbor, MI}{Database Programmer}{September 2010 - Present}
-\begin{itemize}
-		\resitem{Team member developing an employment record administration system based on Apache Tomcat\vspace{-1.5mm} Java Servlets and an Oracle database engine}
-		\resitem{Optimize University of Michigan internal web applications to maintain optimal quality of service\vspace{-1mm} during heavy load periods}
-	\end{itemize}
-	\item
-	\ressubheadingoneline{Freelance iPhone \& iPod Touch Development}{}{}{}
-	\begin{itemize}
-		\resitem{Architected, developed and distributed consumer and professional mobile applications}
-		\resitem{Enhanced mobile applications with dynamic content from various Internet sources}
-		\resitem{Opened new revenue streams and opportunities for existing businesses by exposing a new, mobile\vspace{-1.5mm} user demographic}
-		\resitem{Tested applications rigorously on diverse equipment to ensure consistent operation}
-		\resitem{Sample applications in Apple's Application Store as of November 2010:
-			\begin{itemize}
-			\item \vspace{-1.5mm}
-				"To-Do's" by RubyRazzi - Downloaded 107,633 times
-			\item \vspace{-1mm}
-				"iPM" by RubyRazzi - Downloaded 9,098 times
-			\item \vspace{-1mm}
-				"Porsche News" by 9Magazine - Downloaded 1,720 times
-			\item \vspace{-1mm}
-				"Bugger" by ZZTech - Downloaded 1,012 times
-			\end{itemize}
-		}
+		\item
+			\ressubheadingnoitalics{CommonPlace USA}{Cambridge, MA}{Ruby on Rails Developer}{November 2010 - Present}
+				\begin{itemize}
+					\resitem{Team member developing an innovative social network, centered around a user's interaction with his\vspace{-2mm} or her community}
+					\resitem{Responsible for the implementation of features essential to mass-adopted social networks, including:
+						\begin{itemize}
+							\item \vspace{-2mm}
+								Integration with existing social platforms, such as Facebook;
+							\item \vspace{-1.5mm}
+								Retrieval and integration of relevant external data sources; and
+							\item \vspace{-1.5mm}
+								Development of a system allowing easy and effective communication between users
+						\end{itemize}}
+					\resitem{Developed an infrastructure capable of efficiently handling thousands of simultaneous connections}
+					\resitem{Assessed and eliminated various security vulnerabilities in pre-written and custom code}
+					\resitem{Ensured cross-browser compatibility across three major platforms:
+						\begin{itemize}
+							\item \vspace{-2mm}
+								Browsers: Microsoft Internet Explorer 6 though 8, Mozilla Firefox, Google Chrome, Apple Safari
+						\end{itemize}}
+				\end{itemize}
+		\item
+			\ressubheadingnoitalics{College of Engineering - University of Michigan}{Ann Arbor, MI}{Database Programmer}{September 2010 - Present}
+				\begin{itemize}
+					\resitem{Team member developing an employment record administration system based on Apache Tomcat\vspace{-1.5mm} Java Servlets and an Oracle database engine}
+					\resitem{Optimize University of Michigan internal web applications to maintain optimal quality of service\vspace{-1mm} during heavy load periods}
+				\end{itemize}
+		\item
+			\ressubheadingoneline{Freelance iPhone \& iPod Touch Development}{}{}{}
+				\begin{itemize}
+					\resitem{Architected, developed and distributed consumer and professional mobile applications}
+					\resitem{Enhanced mobile applications with dynamic content from various Internet sources}
+					\resitem{Opened new revenue streams and opportunities for existing businesses by exposing a new, mobile\vspace{-1.5mm} user demographic}
+					\resitem{Tested applications rigorously on diverse equipment to ensure consistent operation}
+					\resitem{Sample applications in Apple's Application Store as of November 2010:
+						\begin{itemize}
+							\item \vspace{-1.5mm}
+								"To-Do's" by RubyRazzi - Downloaded 107,633 times
+							\item \vspace{-1mm}
+								"iPM" by RubyRazzi - Downloaded 9,098 times
+							\item \vspace{-1mm}
+								"Porsche News" by 9Magazine - Downloaded 1,720 times
+							\item \vspace{-1mm}
+								"Bugger" by ZZTech - Downloaded 1,012 times
+						\end{itemize}
+					}
+				\end{itemize}
 	\end{itemize}
 
-%\item 
-%	\ressubheadingoneline{Freelance Web Development}{}
-%	\begin{itemize}
-%		\resitem{Designed and developed fully customized corporate and personal Internet sites for small businesses\vspace{-1mm} and individuals on a contract basis}
-%		\resitem{Developed data-intensive applications using dynamic content available from various Internet sources}
-%		\resitem{Implemented applications capable of efficiently handling thousands of simultaneous connections}
-%		\resitem{Eliminated security vulnerabilities in pre-written code, safeguarding against possible attack vectors}
-%		\resitem{Guaranteed the secure interaction between clients and servers for transfer of sensitive information}
-%		\resitem{Ensured compatibility of web sites with major browsers on three major platforms
-%			\begin{itemize}
-%				\item \vspace{-2mm} Browsers: Microsoft Internet Explorer, Mozilla Firefox, Google Chrome, Apple Safari
-%				\item \vspace{-1mm} Platforms: Windows, Mac OS X, Linux
-%			\end{itemize}
-%		}
-%		\resitem{Employed search engine optimization techniques, such as URL canonization, on web sites to improve\vspace{-1mm} search result rankings and increase profits}
-%	\end{itemize}
-
-%\item
-%	\ressubheadingoneline{Freelance Web Hosting and Server Administration}{}
-%	\begin{itemize}
-%		\resitem{Developed a tightly integrated infrastructure to facilitate seamless client order fulfillment}
-%		\resitem{Integrated and deployed mechanisms offering high availability to Linux web servers}
-%		\resitem{Ensured automated security and integrity of data residing on servers}
-%	\end{itemize}
-\end{itemize}
-
-\vspace{-5mm}
+\headingspace
 \resheading{Awards}
-\begin{itemize}
-	\item \ressubheadingoneline{First Place Winner, Morningstar Programming Competition}{October 2010}
-	\item \ressubheadingoneline{Winner, New York Times Open Hackday Competition}{December 2010}{}{}
-	\item \ressubheadingoneline{Second Place Winner, Yahoo Hack U Competition}{October 2010}{}{}
-	\item \ressubheadingoneline{Third Place Winner, WolverineSoft Game Development Competition}{January 2011}{}{}
-\end{itemize}
+	\begin{itemize}
+		\item \ressubheadingoneline{First Place Winner, Morningstar Programming Competition}{October 2010}
+		\item \ressubheadingoneline{Winner, New York Times Open Hackday Competition}{December 2010}{}{}
+		\item \ressubheadingoneline{Second Place Winner, Yahoo Hack U Competition}{October 2010}{}{}
+		\item \ressubheadingoneline{Third Place Winner, WolverineSoft Game Development Competition}{January 2011}{}{}
+	\end{itemize}
 
-\vspace{-5mm}
+\headingspace
 \resheading{Education}
-
-\begin{itemize}
-\item
-	\ressubheadingnoitalics{BS in Computer Science - University of Michigan}{2014}{Cumulative GPA: 3.23 (as of December 2010)}{Ann Arbor, MI}
-%\item
-%	\ressubheadingnoitalics{Morristown High School}{Morristown, NJ}{Honors and Advanced Placement Track (GPA: 3.76)}{2010}
-
-\end{itemize}
-
+	\begin{itemize}
+	\item
+		\ressubheadingnoitalics{BS in Computer Science - University of Michigan}{2014}{Cumulative GPA: 3.23 (as of December 2010)}{Ann Arbor, MI}
+	\end{itemize}
 \end{document}
